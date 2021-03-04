@@ -14,6 +14,7 @@ fpsClock = pygame.time.Clock()  # needed for 'wait vbl'
 seedTick = 0
 random.seed(seedTick)
 score = 0
+wrong = 0
 answer = 0
 
 screen = pygame.display.set_mode((1024,768))
@@ -42,7 +43,8 @@ def randoms():
 def textPrep():
     upperText = font.render("Choose the correct flag name:", True, (5,5,5)) 
     scoreText = font.render("Your score is: " + str(score), True, (5,5,5))
-    return (upperText, scoreText)
+    wrongText = font.render("Incorrect answers: " + str(wrong), True, (5,5,5))
+    return (upperText, scoreText, wrongText)
 
 def questionPrep():
     x, f1, f2, f3, = randoms()
@@ -62,15 +64,28 @@ def questionPrep():
      
 def blitting():
     x, loText1, loText2, loText3, _, = questionPrep()
-    uText, scText = textPrep()
+    uText, scText, wgText = textPrep()
     screen.fill((230,220,250))
     screen.blit(x, (blitPosition,100))
     screen.blit(uText, (400,50))
-    screen.blit(loText1, (400,550))
-    screen.blit(loText2, (400,600))
-    screen.blit(loText3, (400,650))
-    screen.blit(scText, (400,700))
+    screen.blit(loText1, (400,500))
+    screen.blit(loText2, (400,540))
+    screen.blit(loText3, (400,580))
+    screen.blit(scText, (400,620))
+    screen.blit(wgText, (400,660))
     pygame.display.flip()
+
+def gameOverCheck():
+    global wrong
+    global run
+    if wrong == 3:
+        screen.fill((230,220,250))
+        gameOverText = font.render("3 wrong answers, try again! ", True, (5,5,5))
+        screen.blit(gameOverText, (400,620))
+        pygame.display.flip()
+        pygame.time.delay(2000)
+        run = False
+
 
 # drawing first flag tec.
 def process():
@@ -78,6 +93,7 @@ def process():
     textPrep()
     questionPrep()
     blitting()
+    
 
 process()   
 
@@ -105,9 +121,21 @@ while run:
             elif event.key == pygame.K_3 and answer == 3:
                 score += 1
                 process() 
-         
+            elif event.key == pygame.K_1 and answer != 1:
+                wrong += 1
+                process()
+            elif event.key == pygame.K_2 and answer != 2:
+                wrong += 1
+                process()
+            elif event.key == pygame.K_3 and answer != 3:
+                wrong += 1
+                process() 
+        
+        gameOverCheck() 
 
-                
+        
+           
+
              
 
         if event.type == pygame.QUIT:
