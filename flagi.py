@@ -116,9 +116,7 @@ while run:
         
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
-                run = False
-            elif event.key == pygame.K_4:           # testing changing mode on key press
-                execfile('flagiLearningMode.py')
+                execfile('start.py')  
             elif event.key == pygame.K_1 and answer == 1:
                 score += 1
                 process()

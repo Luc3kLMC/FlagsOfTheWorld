@@ -51,12 +51,12 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
-                run = False
-            if event.key == pygame.K_LEFT and randomFlag == 0:
+                execfile('start.py')
+            elif event.key == pygame.K_LEFT and randomFlag == 0:
                 randomFlag = flagsTotal
             elif event.key == pygame.K_LEFT and randomFlag != 0:   
                 randomFlag = randomFlag - 1
-            if event.key == pygame.K_RIGHT and randomFlag == flagsTotal:
+            elif event.key == pygame.K_RIGHT and randomFlag == flagsTotal:
                 randomFlag = 0
             elif event.key == pygame.K_RIGHT and randomFlag != flagsTotal:
                 randomFlag = randomFlag + 1 
