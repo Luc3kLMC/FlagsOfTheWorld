@@ -3,16 +3,19 @@
 # My first project for python learning purposes
 # Greets, Luc3k
 
-import pygame, sys, random, time
+import pygame, sys, random, time, datetime
 import arrays
+
 
 
 pygame.init()
 
 FPS = 30
 fpsClock = pygame.time.Clock()  # needed for 'wait vbl'
-seedTick = 0
-random.seed(seedTick)
+now = datetime.datetime.now()
+startingTick = now.second
+seedTick = now.second 
+random.seed(startingTick)
 score = 0
 wrong = 0
 answer = 0
@@ -21,6 +24,7 @@ screen = pygame.display.set_mode((1024,768))
 pygame.display.set_caption("Flags Python by Luc3k")
 
 run = True
+
 
 font = pygame.font.SysFont("comicsansms", 16)
 
@@ -31,6 +35,7 @@ blitPosition = 256 # x of the screen = 1024, flag = 512, needed to centre the bl
 flagsTotal = len(arrays.flagName) - 1 # sum of the flags added to program, always -1 (starting from 0!)
 
 # functions
+
 
 def randoms():
     random.seed(seedTick)
@@ -81,10 +86,10 @@ def gameOverCheck():
     if wrong == 3:
         screen.fill((230,220,250))
         gameOverText = font.render("3 wrong answers, try again! ", True, (5,5,5))
-        screen.blit(gameOverText, (400,620))
+        screen.blit(gameOverText, (400,320))
         pygame.display.flip()
         pygame.time.delay(2000)
-        run = False
+        execfile('start.py')
 
 
 # drawing first flag tec.
@@ -95,9 +100,11 @@ def process():
     blitting()
     
 
-process()   
+process()
 
-# main loop
+
+
+# main game loop
 while run:
     seedTick +=1
     randoms()
