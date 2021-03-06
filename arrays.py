@@ -9,7 +9,7 @@ flagImg = ["afghanistan.PNG", "aland-islands.png", "albania.png", "algeria.png",
 "cayman-islands.png", "central-african-republic.png", "ceuta.png", "chad.png", "chile.png", "christmas-island.png",
 "cocos-island.png", "colombia.png", "comoros.png", "cook-islands.png", "corsica.png", "costa-rica.png",
 "croatia.png", "cuba.png", "cyprus.png", "czech-republic.png", "denmark.png", "dominica.png",
-"dominican-republic.png", "equador.png", "egypt.png", "el-salvador.png", "england.png", "ethiopia.png",
+"dominican-republic.png", "ecuador.png", "egypt.png", "el-salvador.png", "england.png", "ethiopia.png",
 "european-union.png", "faroe-islands.png", "fiji.png", "finland.png", "france.png", "french-polynesia.png",
 "galapagos-islands.png", "gambia.png", "germany.png", "ghana.png", "greece.png", "guatemala.png", "guinea.png",
 "hawaii.png", "honduras.png", "hong-kong.png", "hungary.png", "iceland.png", "indonesia.png", "iran.png",
@@ -26,7 +26,7 @@ flagImg = ["afghanistan.PNG", "aland-islands.png", "albania.png", "algeria.png",
 "spain.png", "st-lucia.png", "st-vincent-and-the-grenadines.png", "sweden.png", "switzerland.png",
 "syria.png", "taiwan.png", "tanzania.png", "tokelau.png", "tonga.png", "transnistria.png", "tunisia.png",
 "turkey.png", "turks-and-caicos.png", "uganda.png", "ukraine.png", "united-arab-emirates.png",
-"united-kingdom.png", "united-nations.png", "united-states-of-america.png", "uruguay.png", "vanatu.png",
+"united-kingdom.png", "united-nations.png", "united-states-of-america.png", "uruguay.png", "vanuatu.png",
 "venezuela.png", "vietnam.png", "wales.png", "zambia.png" 
  ]
 
@@ -40,7 +40,7 @@ flagName = ["Afghanistan", "Aland Islands", "Albania", "Algieria", "American Sam
 "Cayman Islands", "Central African Republic", "Ceuta", "Chad", "Chile", "Christmas Island",
 "Cocos Island", "Colombia", "Comoros", "Cook Islands", "Corsica", "Costa Rica",
 "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Dominica",
-"Dominican Republic", "Equador", "Egypt", "El Salvador", "England", "Ethiopia",
+"Dominican Republic", "Ecuador", "Egypt", "El Salvador", "England", "Ethiopia",
 "European Union", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia",
 "Galapagos Islands", "Gambia", "Germany", "Ghana", "Greece", "Guatemala", "Guinea",
 "Hawaii", "Honduras", "Hong Kong", "Hungary", "Iceland", "Indonesia", "Iran",
@@ -57,6 +57,6 @@ flagName = ["Afghanistan", "Aland Islands", "Albania", "Algieria", "American Sam
 "Spain", "St Lucia", "St Vincent and the Grenadines", "Sweden", "Switzerland",
 "Syria", "Taiwan", "Tanzania", "Tokelau", "Tonga", "Transnistria", "Tunisia",
 "Turkey", "Turks and Caicos", "Uganda", "Ukraine", "United Arab Emirates",
-"United Kingdom", "United Nations", "United States of America", "Uruguay", "Vanatu",
+"United Kingdom", "United Nations", "United States of America", "Uruguay", "Vanuatu",
 "Venezuela", "Vietnam", "Wales", "Zambia"
  ]

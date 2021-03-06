@@ -19,6 +19,8 @@ run = True
 
 font = pygame.font.SysFont("comicsansms", 16)
 
+#keyControlVariable = 0
+
 
 
 # variables
@@ -49,7 +51,8 @@ blitting()
 while run:
      
     for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN:
+        if event.type == pygame.KEYDOWN: 
+            
             if event.key == pygame.K_ESCAPE:
                 execfile('start.py')
             elif event.key == pygame.K_LEFT and randomFlag == 0:
@@ -72,6 +75,7 @@ while run:
             run = False
 
     fpsClock.tick(FPS)    # wait vbl
+    
 
 
 
