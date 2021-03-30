@@ -3,7 +3,7 @@
 # My first project for python learning purposes
 # Greets, Luc3k
 
-import pygame, sys, random
+import pygame, sys, random, os
 import arrays
 
 
@@ -32,7 +32,7 @@ randomFlag = random.randint(0, flagsTotal)
 upperText = font.render("Use left and right arrows to browse flags.", True, (5,5,5)) 
 lowerText = font.render(arrays.flagName[randomFlag], True, (5,5,5))  # print flag name from array
 
-flagBlit = pygame.image.load(arrays.flagImg[randomFlag]).convert() #
+flagBlit = pygame.image.load(os.path.join('data', arrays.flagImg[randomFlag])).convert() #
 
 # functions
 
@@ -66,7 +66,7 @@ while run:
  
             
                  
-            flagBlit = pygame.image.load(arrays.flagImg[randomFlag]).convert()
+            flagBlit = pygame.image.load(os.path.join('data', arrays.flagImg[randomFlag])).convert()
             lowerText = font.render(arrays.flagName[randomFlag], True, (5,5,5))
             blitting()
     

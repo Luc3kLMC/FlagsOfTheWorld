@@ -3,7 +3,7 @@
 # My first project for python learning purposes
 # Greets, Luc3k
 
-import pygame, sys, random, time, datetime
+import pygame, sys, random, time, datetime, os
 import arrays
 
 
@@ -56,11 +56,11 @@ def questionPrep():
     global answer
     answer = x
     if x == 1:
-        flagBlit = pygame.image.load(arrays.flagImg[f1]).convert()
+        flagBlit = pygame.image.load(os.path.join('data', arrays.flagImg[f1])).convert()
     elif x == 2:
-        flagBlit = pygame.image.load(arrays.flagImg[f2]).convert()
+        flagBlit = pygame.image.load(os.path.join('data', arrays.flagImg[f2])).convert()
     elif x == 3:
-        flagBlit = pygame.image.load(arrays.flagImg[f3]).convert() 
+        flagBlit = pygame.image.load(os.path.join('data', arrays.flagImg[f3])).convert() 
 
     lowerText1 = font.render("1. " + arrays.flagName[f1], True, (5,5,5))  # print flag name from array
     lowerText2 = font.render("2. " + arrays.flagName[f2], True, (5,5,5))
